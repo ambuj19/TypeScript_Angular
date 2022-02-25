@@ -1,0 +1,19 @@
+#hover-content {
+
+    display:none;
+
+}
+
+
+
+#parent:hover #hover-content {
+
+    display:block;
+    
+   
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5em;
+    padding: 0.5em 0.8em;
+
+}
