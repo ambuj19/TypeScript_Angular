@@ -1,0 +1,65 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<body>
+    <mat-toolbar fxLayout="row" id="nav" style="background-color:aliceblue;">
+      <mat-card-header id="logo">
+        <img src="https://plsadaptive.s3.amazonaws.com/eco/images/partners/FkQ4Xnlu2QJN2sdKKhRVWoBzz7HOepQopycbMu3h.png" alt="logo" width="15%" >&nbsp;&nbsp;
+
+
+             <!-- <mat-card-title style="text-align: right;"> Approval Management </mat-card-title>  -->
+             <span fxFlex>Welcome to Product Details</span>
+
+       </mat-card-header>
+
+        <!-- <button mat-button *ngFor="let item of menuItems" fxHide.xs>
+            <mat-icon class="mr">{{item.icon}}</mat-icon>
+            {{item.label}}
+        </button> -->
+        <span class="nav-tool-items" fxHide.xs>
+            <a mat-button [routerLink]="'/accounts'"> Hi Ambuj <img
+                    src="https://clipground.com/images/img_avatar-png-2.png" alt="Avatar Logo" style="width:40px;"
+                    class="rounded-pill"> </a>
+            <a mat-button [routerLink]="'/accounts'"> My Table Data <mat-icon>question_answer</mat-icon> </a>
+
+              <a mat-button [routerLink]="'/accounts'"> Logout <mat-icon>arrow_forward</mat-icon> </a>
+
+        </span>
+        <button mat-icon-button [matMenuTriggerFor]="dropMenu" fxHide fxShow.xs>
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #dropMenu="matMenu">
+            <ng-container>
+                <button mat-menu-item>
+
+                    <a mat-button [routerLink]="'/accounts'"> Hi Ambuj <img
+                            src="https://clipground.com/images/img_avatar-png-2.png" alt="Avatar Logo"
+                            style="width:40px;" class="rounded-pill"> </a><br>
+
+                </button>
+                <button mat-menu-item>
+                    <a mat-button [routerLink]="'/accounts'"> My Request <mat-icon>question_answer</mat-icon> </a>
+                </button>
+
+                <mat-divider></mat-divider>
+            </ng-container>
+        </mat-menu>
+    </mat-toolbar>
+
+<app-table></app-table>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
