@@ -35,4 +35,7 @@ export class DataService {
   addPost(data: detail) {
     this.ELEMENT_DATA.push(data);
   }
+  deletePost(index:any) {
+    this.ELEMENT_DATA = [...this.ELEMENT_DATA.slice(0, index), ...this.ELEMENT_DATA.slice(index + 1)];
+  }
 }

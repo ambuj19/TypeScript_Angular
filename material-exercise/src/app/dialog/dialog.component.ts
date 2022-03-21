@@ -19,11 +19,12 @@ export class DialogComponent implements OnInit {
   public event: EventEmitter<any> = new EventEmitter();
   constructor(public dataService: DataService,@Inject(MAT_DIALOG_DATA) public data: any,public dialogRef: MatDialogRef<DialogComponent>) { }
   onNoClick(): void {
-    console.log("hello");
+    //console.log("hello");
     this.dialogRef.close();
   }
 
   onSubmit(): void {
+    console.log("hello");
     this.Post.position = this.dataService.dataLength();
     this.event.emit({data: this.Post});
     this.dialogRef.close();

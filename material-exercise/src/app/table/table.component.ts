@@ -31,6 +31,13 @@ export class TableComponent implements OnInit {
 
     });
   }
+  deletePost(id:any) {
+
+    this.dataService.deletePost(id);
+    console.log(this.dataService.dataLength.length);
+    this.dataSource = new PostDataSource(this.dataService);
+
+  }
 
   constructor(private _BookingService: DataService,private dataService: DataService, public dialog: MatDialog) {
     this._BookingService.getData().subscribe((response: any) => {
