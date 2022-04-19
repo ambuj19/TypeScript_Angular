@@ -1,0 +1,54 @@
+<div class="example-container mat-elevation-z8">
+    <mat-card class="example-card">
+        <form [formGroup]="empForm" (ngSubmit)="onFormSubmit(empForm.value)">
+            <mat-form-field>
+                <input matInput placeholder="Enter Book Title" formControlName="title">
+
+                <mat-error>
+                    <span *ngIf="!empForm.get('title')?.valid && empForm.get('title')?.touched">Title Required</span>
+                </mat-error>
+            </mat-form-field>
+
+
+            <mat-form-field>
+                <input matInput  formControlName="catag" placeholder="Enter Catagory">
+
+                <mat-error>
+                    <span *ngIf="!empForm.get('catag')?.valid && empForm.get('catag')?.touched">Catagory Required</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Enter Author " formControlName="author">
+
+                <mat-error>
+                    <span *ngIf="!empForm.get('author')?.valid && empForm.get('author')?.touched">Author Required</span>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput  formControlName="year" placeholder="Enter Year">
+
+                <mat-error>
+                    <span *ngIf="!empForm.get('year')?.valid && empForm.get('year')?.touched"> Year Required</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput  formControlName="date" placeholder="Enter Date">
+
+                <mat-error>
+                    <span *ngIf="!empForm.get('date')?.valid && empForm.get('date')?.touched"> Date Required</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput  formControlName="url" placeholder="Enter Url">
+
+                <mat-error>
+                    <span *ngIf="!empForm.get('url')?.valid && empForm.get('url')?.touched"> Url Required</span>
+                </mat-error>
+            </mat-form-field>
+            <div class="button-row">
+                <button mat-flat-button color="primary" type="submit" [disabled]="!empForm.valid"><mat-icon>save</mat-icon></button>
+            </div>
+        </form>
+    </mat-card>
+    </div>

@@ -1,0 +1,29 @@
+#example1 {
+
+    padding: 60px;
+    background: url(https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1290&q=80);
+
+    background-repeat:repeat;
+    background-size: auto;
+  }
+
+
+  div.container {
+    margin: 20px;
+  }
+.image-card {
+      max-width: 150px;
+    }
+
+    .header-image-avatar {
+
+      background-size: cover;
+    }
+    .mat-row:nth-child(even){
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    }
+
+    .mat-row:nth-child(odd){
+        background: linear-gradient(#e66465, #9198e5);
+
+    }
