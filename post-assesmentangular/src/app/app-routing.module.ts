@@ -13,6 +13,7 @@ const routes: Routes = [{ path: 'admin', component:AdminComponent,canActivate:[A
 {path:'update/:id',component:UpdateBookComponent},
 {path:'user',component:UserComponent,canActivate:[AuthGuard]},
 {path:'login',component:LoginComponent},
+{path:'book/id',component:AdminComponent},
  { path: '**', component:LoginComponent }
 ];
 

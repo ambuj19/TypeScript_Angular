@@ -39,9 +39,9 @@ export class BooksService {
   public addbook(emp:any):Observable<Books>{
     return this.http.post<Books>(this.baseUrl,emp);
   }
-  public deletebook(id:number):Observable<Books>{
+  public deletebook(id:number):Observable<Books[]>{
     const url=`${this.baseUrl}/${id}`;
-    return this.http.delete<Books>(url).pipe(catchError(this.handleError));
+    return this.http.delete<Books[]>(url).pipe(catchError(this.handleError));
   }
   public getUpdateUser(id: number): Observable<Books> {
 
@@ -63,14 +63,10 @@ return this.http.put<users>(url,changes);
 
 }
   public updateUser(user: any): Observable<Books> {
-
+debugger;
     const url = `${this.baseUrl}/${user.id}`;
-
-    return this.http.put<Books>(url,user).pipe(
-
-      map(() => user)
-
-    );
+    debugger;
+    return this.http.put<Books>(url,user);
 
   }
 }

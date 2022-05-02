@@ -29,8 +29,8 @@ export class AdminComponent implements OnInit {
   {
     this.empService.deletebook(id).subscribe(response=>{
       console.log(response);
-     // this.route.navigate(['/admin']);
-      window.location.reload();
+      this.route.navigate(['/admin/'+id]);
+     // window.location.reload();
       this.toastr.success("Deleted");
     },(error:any)=>{
       console.log(error);
