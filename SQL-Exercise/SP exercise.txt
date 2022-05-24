@@ -1,0 +1,34 @@
+You can start working on SP's for this Table, Below is the problem statement
+1.  SP to display details of immediate reportees for a given manager.
+2.  SP to display reportees reportess i.e if Jurgen login in,he should be able to see his reportess,plus his reportess reportee--Covered in Training
+3.  SP to display the count of reportees based on gender for each manager.-- Covered in Training
+4. SP to search employee either by name or id or designation.
+5.SP to count total employees in each team.
+6.SP to count total employee in each team by gender.
+select * from Employees
+create procedure spReporteesOFaManager 
+@manager varchar(30)
+as 
+Begin
+   select *from Employees where Reporting_Manager=@manager
+END
+EXEC spReporteesOFaManager 'Nagaraj'
+create procedure spGetTotalEmployeesByTeam
+as
+Begin
+    select count(EmpId) as TotalEmployees ,Team from Employees group by Team
+END
+exec spGetTotalEmployeesByTeam
+create procedure spGetTotalEmployeesByTeamAndGender
+as
+Begin
+select count(Empid) as TotalEmployees ,Team,Gender from Employees group by Team,Gender
+END
+exec spGetTotalEmployeesByTeamAndGender 
+alter procedure spGetEmployeesByNameIdDesignation
+@Name varchar(30),@id int,@Designation varchar(30)
+as
+begin
+    select * from Employees where Name=@Name or Empid=@id or Designation=@Designation
+End
+exec spGetEmployeesByNameIdDesignation @Name='Harsha' , @id=1, @Designation=''
